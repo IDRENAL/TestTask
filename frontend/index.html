@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Manage scheduled Python scripts" />
+    <title>Script Manager</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Automation control</p>
+          <h1>Python scripts</h1>
+          <p class="subtitle">Run jobs, pause schedules, and update cron expressions.</p>
+        </div>
+        <button id="refresh" class="button button-secondary" type="button">Refresh</button>
+      </header>
+
+      <section class="access" aria-labelledby="access-title">
+        <div>
+          <h2 id="access-title">Control access</h2>
+          <p>The key is kept only in this page and sent for changes.</p>
+        </div>
+        <label>
+          <span>API key</span>
+          <input id="api-key" type="password" autocomplete="off" placeholder="X-API-Key" />
+        </label>
+      </section>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+      <section id="scripts" class="script-grid" aria-label="Available scripts">
+        <p class="empty">Loading scripts…</p>
+      </section>
+    </main>
+  </body>
+</html>
